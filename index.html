@@ -1,40 +1,42 @@
+<!--DOCTYPE-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Visualizer</title>
+    <link rel="stylesheet" href="style.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAA
     AAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAhMRoAAAAAABkgGQAUExkAYdkeABQUGQBh2h4ARpUcAFzNHgBf1B4AExA
     ZAFnFHQAzZRsAYNceAAAAAAAAAAAAERERERERERERER3d3dEREREd3d3d3dEREd3d3d3d3RER3d3d3d3dER3dWd3
     FXd3RHd3bIE3Y3dEd3X3d01Xd0R3dVVVa3d3RHd3d3d1lXdEd1VVVVVXd0RHd3d3d3d0REd3d3d3d3RERHd3d3d3
-    RERERHd3d0RERERERERERERH//wAA+B8AAOAHAADAAwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAAD
-    AAwAA4AcAAPgfAAD//wAA"
-    rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    RERERHd3d0RERERERERERERH//wAA+B8AAOAHAADAAwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADAAwAA4AcAAPgfAAD//wAA"
+    rel="icon" type="image/x-icon"> <!--Favicon-->
+    <title>Spotify Data Visualizer</title>
 </head>
-<body>
-    
+<body id="container">
+
     <header>
         <div>
             <h1 class="title">Spotify Data Visualizer</h1>
         </div>
-        <img src="./logo.png" alt="Spotify Logo">
+        <img src="./logo.png" alt="Spotify logo">
     </header>
-    
+
+
     <section class="info-section">
-        <div>
+        <div class="left-container">
             <h2>About</h2>
             <p>Welcome to the <b>Spotify Data Visualizer</b>. This project takes a large data set of music information and 
-            organizes it into categories you can select</p>
+                organizes it into categories you can select!</p>
         </div>
-        <div>
+        <div class="right-container">
             <h2>Visualizations</h2>
             <ul>
                 <li>Most Common Genre (Bar Graph)</li>
                 <li>Most Average Year Song Release (Pie Chart)</li>
-                <li>Loudest song in Decibles (Linear Graph)</li>
+                <li>Loudest Song in Decibles (Linear Graph)</li>
             </ul>
+            <!-- <img src="https://icons.veryicon.com/png/o/miscellaneous/resume-breakpoint-simple-line-mark/music-435.png" alt="The spotify logo without the text"> -->
         </div>
     </section>
 
@@ -45,27 +47,26 @@
                 <button class="spotify-button result-button">Most Common Genre</button>
                 <button class="spotify-button result-button">Year Song Released</button>
                 <button class="spotify-button result-button">Loudest Song</button>
+                <button class="spotify-button result-button">Search</button>
             </div>
-
             <div class="result-card" id="result-card">
                 <div class="result-content">
-                    <p class="result-intro-text">Select a category and chart type to visualize data.</p>
+                    <h4 class="result-intro-text">Select a category and chart type to visualize data.</h4>
                 </div>
             </div>
-
         </div>
     </section>
 
     <footer>
-        <ul>
+        <ul class="social-links">
             <li>
-                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/daniel-ek-1b52093a/">LinkedIn</a>
             </li>
             <li>
-                <a href="https://github.com/Roseline-Projects">Github</a>
+                <a href="https://github.com/spotify">GitHub</a>
             </li>
             <li>
-                <a href="https://www.instagram.com/barnesandnoble/">Instagram</a>
+                <a href="https://www.instagram.com/spotify/">Instagram</a>
             </li>
         </ul>
     </footer>

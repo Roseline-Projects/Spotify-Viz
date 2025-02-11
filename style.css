@@ -1,72 +1,137 @@
-body {
-    background-color: #121212;
-    color: white;
-    font-family: 'Inter', sans-serif;
+
+* { /* Catch all selector - style applies to all elements */
+    font-family: 'Inter', sans-serif; /* Modern font */
 }
 
-.title {
-    color: #1ED760;
-    font-size: 2.5rem;
+body { /* Element selector - will style all corresponding elements on HTML page, in this case the <body> */
+    background-color: #121212; /* Dark grey background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#container { /* ID selector - selects any element with this ID */
+    width: 80%; /* Wider container for better readability */
+    max-width: 1200px;
+    margin: 20px auto; /* Centered with margin */
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between title and logo */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #282828; /* Subtle border */
 }
 
 img {
-    width: 150px;
+    width: 150px; /* Smaller logo */
 }
 
-.info-section h2 {
+.title { /* Class selector - selects any element with this class */
+    font-size: 2.5rem; /* Reduced title size */
+    color: #1ED760; /* Spotify green */
+    margin-bottom: 0;
+}
+
+.info-section, .result-section { /* Select multiple classes */
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Darker section background */
+    border-radius: 10px; /* Curved corners */
+}
+
+.info-section h2, .result-section h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
     font-size: 1.8rem;
 }
 
-.info-section p {
+.info-section p { /* Select <p> tags within an element with the "info-section" class */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #B3B3B3; /* Lighter text for paragraphs */
+}
+
+.right-container ul {
+    list-style: none; /* Remove bullets */
+    padding-left: 0;
+}
+
+.right-container li {
+    margin-bottom: 8px;
     color: #B3B3B3;
 }
 
-.info-section li {
-    color: #B3B3B3;
+.spotify-button, select.spotify-button, .result-button {
+    background-color: black; /* Black background */
+    color: #1DB954; /* Spotify green text */
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 25px; /* More rounded buttons */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    appearance: none; /* Reset default appearance */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
 }
 
-.info-section ul {
-    list-style: none;
-}
-
-.result-section {
-    background-color: #1E1E1E;
-
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+.spotify-button:hover, select.spotify-button:hover {
+    background-color: #1ED760;
+    color: black; /* Go black on hover */
 }
 
 #result-container {
     text-align: center;
 }
 
-.result-section h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.spotify-button, .result-button {
-    background-color: black;
-    color: #1ED760;
-    font-size: 1rem;
-
-    padding: 12px 24px;
-    border: none;
-    border-radius: 25px;
+#result {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .result-card {
-    background-color: #282828;
+    background-color: #282828; /* Darker result card */
     color: white;
-
-    padding: 30px;
     border-radius: 10px;
+    padding: 30px;
 }
 
 .result-intro-text {
     font-size: 1.1rem;
     font-weight: 300;
-
     margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1E1E1E; /* Footer background same as sections */
+    padding: 20px;
+    border-top: 1px solid #282828; /* Subtle border */
+    margin-top: 40px;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex; /* Change element to flex box */
+    justify-content: center; /* Center social links */
+    gap: 30px; /* Spacing between links */
+    font-size: 0.9rem;
+}
+
+.social-links li a {
+    color: #B3B3B3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: white; /* White on hover */
 }
